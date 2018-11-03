@@ -6,11 +6,17 @@ let gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     pump = require('pump'),
     uglify = require('gulp-uglify'),
-    clean = require('gulp-clean');
+    clean = require('gulp-clean'),
+    imagemin = require('gulp-imagemin');
 
 gulp.task('copy-html',()=>{
     return gulp.src('./src/**/*.html')
         .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('copy-plugins',()=>{
+    return gulp.src('./src/plugins/**/*')
+        .pipe(gulp.dest('./dist/plugins/'));
 });
 
 gulp.task('clean-dist',()=>{
@@ -89,7 +95,17 @@ gulp.task('copy-js',['minify-js'], () => {
         .pipe(gulp.dest('./dist/js/'))
 });
 
-gulp.task('serve', ['copy-html', 'copy-css', 'copy-js'], ()=> {
+// tasks for images
+
+gulp.task('minify-img',()=>{
+    return gulp.src('./src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./dist/img/'))
+})
+
+
+
+gulp.task('serve',['copy-html','copy-css','copy-js','minify-img'], ()=> {
     browserSync.init({
         server: {
             baseDir: "./dist"
@@ -101,7 +117,6 @@ gulp.task('serve', ['copy-html', 'copy-css', 'copy-js'], ()=> {
     gulp.watch('./src/js/**/*.js', ['copy-js']).on('change', browserSync.reload);
 });
 
-
 gulp.task('dev',['clean-dist'],()=>{
     gulp.start('serve');
 });
@@ -110,6 +125,6 @@ gulp.task('build', ['clean-dist'],()=>{
    gulp.start('copy-html');
    gulp.start('copy-css');
    gulp.start('copy-js');
+   gulp.start('minify-img');
 });
 
-gulp.task( 'default', [ 'build' ] )
