@@ -1,3 +1,281 @@
-.h1{
-    color: red
+.header {
+    width: 100%;
+    background-color: #222125;
+    height: 100px;
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    text-align: center;
+    }
+    &__content {
+      width: 100%;
+      
+      display: flex;
+      flex-direction: row;
+      line-height: 100px;
+      margin: 0 auto;
+      padding: 0 10px 0 10px;
+      box-sizing: border-box;
+    }
+    &__logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      width: 12.8%;
+      .logo__logo-img {
+        //display: flex;
+        //align-items: center;
+        line-height: 100%;
+        //background-image: url("../img/Logo.png");
+      }
+      .logo__hover{
+        display: none;
+      }
+      .logo__text {
+        font-family: 'Lato', sans-serif;
+        color: #8d81ac;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 16px;
+        text-align: left;
+        margin-left: 17px;
+      }
+    }
+    &__flex-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 28.5%;
+      width: 60.2%;
+      .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-decoration: none;
+        align-items: center;
+        width: 517px;
+        list-style-type: none;
+        margin-right: 4%;
+        &__link {
+          font-family: 'Montserrat', sans-serif;
+          text-decoration: none;
+          color: #8d81ac;
+          font-size: 16px;
+          font-weight: 700;
+          text-align: left;
+          vertical-align: middle;
+        }
+      }
+    }
+    &__btn {
+      padding: 12px 35px 11px 35px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 15px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    &__burger-menu {
+        display: none;
+    }
+  }
+  .btn_violet {
+    background-color: #8e82ad;
+    white-space: nowrap;
+  }
+  .menu__link:hover {
+    color: #ffffff;
+  }
+  .btn_violet:hover {
+    background-color: #fff;
+    color: #8d81ac;
+    border: 1px solid #8d81ac;
+  }
+  .header__logo:hover .logo__hover {
+    display: block;
+    margin-top: -3px;
+  }
+  .header__logo:hover .logo__img{
+    display: none;
+  }
+  .header__logo:hover .logo__text {
+    color: #ffffff;
+  }
+ .about-company {
+   position: relative;
+   background-image: url(../img/about-company-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 1200px;
+      }
+      &__description {
+        padding-top: 60px;
+        padding-bottom: 485px;
+        .description {
+          &__title {
+            font-family: 'Montserrat', sans-serif;
+            color:  #ffffff;
+            font-size: 82px;
+            font-weight: 700;
+          }
+          &__slogan {
+            padding-top: 18px;
+            font-family: 'Lato', sans-serif;
+            color:  #8d81ac;
+            font-size: 30px;
+          }
+          &__text {
+            padding-top: 18px;
+            font-family: 'Montserrat', sans-serif;
+            color:  #848e97;
+            font-size: 16px;
+          }
+        }
+        
+      }
+      &__btn-block {
+        position: absolute;
+        bottom: -65px;
+        left: 40%;
+      }
+      &__btn {
+        padding: 12px 35px 11px 35px;
+        border-radius: 20px;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 21.01px;
+        font-weight: 700;
+        line-height: 15px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      &__btn-text {
+        padding-top: 42px;
+        font-family: 'Montserrat', sans-serif;
+        color:  #848e97;
+        font-size: 14px;
+      }
+ } 
+ .revolutionary-editor {
+   text-align: center;
+   .container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    }
+    &__information {
+        padding-top: 130px;
+        padding-bottom: 36px;
+        padding-left: 145px;
+        padding-right: 145px;
+        .information {
+          &__title {
+            font-family: 'Montserrat', sans-serif;
+            color:  #635c73;
+            font-size: 54.01px;
+            line-height: 23.476px;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+          &__description {
+            padding-top: 38px;
+            font-family: 'Lato', sans-serif;
+            color:  #323232;
+            font-size: 21.01px;
+          }
+        }
+    }
+    &__nav {
+      padding-left: 380px;
+      padding-bottom: 70px;
+      width: 480px;
+      display: flex;
+      justify-content: flex-start;
+      .nav-btn-menu {
+        margin-right: 15px;
+        display: flex;
+        justify-content: flex-start;
+        border: 1px solid rgba(27,31,35,.2);
+        border-radius: .25em;
+        &__logo {
+          background-color: #eff3f6;
+          &__link { 
+            padding-left: 10px;
+            vertical-align: text-bottom;
+          }
+          &__text {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-right: 10px;
+            padding-left: 4px;
+            font-weight: 600;
+            display: inline-block;
+          }
+        }
+        &__numbers {
+          padding: 4px 8px;
+          border-left: 1px solid rgba(27,31,35,.2);
+          font-weight: 600;
+          background-color: #fff;
+        }
+        
+      }
+    }
+ }
+ @media (max-width: 993px) {
+//    .header {
+//      .container {
+//      }
+//     &__menu-adpat {
+//       display: inline-block;
+//     }
+//     .menu {
+//       display: none;
+//     }
+//    }
+//  }
+.header {
+  .container {
+    margin: 0 auto;
+    width: 600px;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    line-height: 80px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    box-sizing: border-box;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    width: 8.8%;
+    .logo__logo-img {
+      //display: flex;
+      //align-items: center;
+      line-height: 80%;
+      //background-image: url("../img/Logo.png");
+    }
+    }
+  }
 }
+  
