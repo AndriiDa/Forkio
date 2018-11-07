@@ -1,11 +1,12 @@
+* {
+    box-sizing: border-box;
+}
 @import "reset";
 @import "variables";
 @import "mixins";
-
 @import "buttons";
-
-
-
-
 @import "header";
+@import "about-company";
+@import "revolutionary";
+@import "callback";
 @import "footer";
