@@ -1,0 +1,126 @@
+.about-company {
+    position: relative;
+    background-image: url(../img/about-company-bg.jpeg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     text-align: center;
+     .container {
+       padding-left: 10px;
+       padding-right: 10px;
+       margin-right: auto;
+       margin-left: auto;
+       max-width: 1200px;
+       }
+       &__description {
+         padding-top: 60px;
+         padding-bottom: 485px;
+         .description {
+           &__title {
+             font-size: 82px;
+             font-weight: 700;
+             font-family: 'Montserrat', sans-serif;
+             color:  #ffffff;
+           }
+           &__slogan {
+             padding-top: 18px;
+             font-size: 30px;
+             font-family: 'Lato', sans-serif;
+             color:  #8d81ac;
+           }
+           &__text {
+             padding-top: 18px;
+             font-size: 16px;
+             font-family: 'Montserrat', sans-serif;
+             color:  #848e97;
+           }
+         }
+         
+       }
+       &__btn-block {
+         bottom: -65px;
+         left: 50%;
+         position: absolute;
+         transform: translate(-50%, 0);
+       }
+       &__btn {
+         padding: 12px 35px 11px 35px;
+         text-align: center;
+         border-radius: 20px;
+         font-size: 21.01px;
+         font-weight: 700;
+         line-height: 15px;
+         text-decoration: none;
+         color: #ffffff;
+         font-family: 'Montserrat', sans-serif;
+       }
+       &__btn-text {
+         padding-top: 42px;
+         font-family: 'Montserrat', sans-serif;
+         color:  #848e97;
+         font-size: 14px;
+       }
+  } 
+  @media (max-width: 992px) {
+    .about-company {
+        .container {
+         margin: 0 auto;
+          }
+          &__description {
+            padding-top: 50px;
+            .description {
+              &__title {
+                font-size: 72px;
+              }
+              &__slogan {
+                padding-top: 26px;
+                font-size: 24px;
+              }
+              &__text {
+                padding-top: 20px;
+                font-size: 14px;
+              }
+            }
+            
+          }
+     } 
+  }
+  @media (max-width: 480px) {
+    .about-company {
+        &__description {
+          padding-top: 101px;
+          .description {
+            &__title {
+              font-size: 54px;
+            }
+            &__slogan {
+              padding-top: 35px;
+              font-size: 20px;
+            }
+            &__text {
+              padding-top: 23px;
+              font-size: 16px;
+            }
+          }  
+        }
+    } 
+  }
+  @media (max-width: 400px) {
+    .about-company {
+      &__description {
+        padding-top: 43px;
+        .description {
+          &__title {
+            font-size: 48px;
+          }
+          &__slogan {
+            padding-top: 20px;
+            font-size: 18px;
+          }
+          &__text {
+            padding-top: 20px;
+            font-size: 14px;
+          }
+        }  
+      }
+    } 
+  }
